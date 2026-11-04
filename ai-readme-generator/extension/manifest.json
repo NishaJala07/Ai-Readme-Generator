@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "AI README Generator",
+  "version": "0.1.0",
+  "description": "Generate project README files from GitHub repositories.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "action": {
+    "default_title": "AI README Generator",
+    "default_popup": "popup.html"
+  }
+}

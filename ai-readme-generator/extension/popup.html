@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI README Generator</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>AI README Generator</h1>
+    <p class="subtitle">
+      Analyze your GitHub project before generating its README.
+    </p>
+
+    <section class="repository">
+      <span class="label">Current repository</span>
+      <p id="repoName">Open a GitHub repository first.</p>
+      <a id="repoLink" href="#" target="_blank" hidden>
+        View repository
+      </a>
+    </section>
+
+    <button id="inspectButton">Analyze Repository</button>
+
+    <p id="status" role="status" aria-live="polite">
+      Ready to get started.
+    </p>
+
+    <section id="results" hidden>
+      <h2>Analysis Results</h2>
+
+      <div class="stat">
+        <span>Total files analyzed</span>
+        <strong id="fileCount">0</strong>
+      </div>
+
+      <h3>Detected languages</h3>
+      <ul id="languageList"></ul>
+
+      <h3>Important files</h3>
+      <ul id="importantFileList"></ul>
+
+      <p id="truncatedNotice" hidden>
+        GitHub returned a partial file tree. Some files may be missing.
+      </p>
+    </section>
+  </main>
+  
+<section id="readmeGenerator">
+  <h3>AI README Generator</h3>
+  <p>Generate documentation for your GitHub project using Gemini AI.</p>
+
+  <button id="generateReadmeButton" type="button">
+    Generate README
+  </button>
+
+  <section id="readmeSection" hidden>
+    <h4>Generated README.md</h4>
+    <pre id="readmePreview"></pre>
+
+    <button id="downloadButton" type="button" disabled>
+      Download README.md
+    </button>
+  </section>
+</section>
+
+</body>
+</html>
